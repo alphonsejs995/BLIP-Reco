@@ -1,16 +1,17 @@
-# Core dependencies
-opencv-python==4.8.1.78
-numpy==1.24.3
-
-# Object detection
-ultralytics==8.0.196
-
-# OCR
-easyocr==1.7.1
-
-# Text-to-speech
-pyttsx3==2.90
-pydub==0.25.1
+# Core AI/ML
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.30.0
+pillow>=10.0.0
+numpy>=1.24.0
+opencv-python>=4.8.0
 
 # Utilities
-pillow==10.0.1
+pyyaml>=6.0
+tqdm>=4.65.0
+requests>=2.31.0
+
+# Optional for hardware interface (smart glasses)
+# pyrealsense2  # For Intel RealSense cameras
+# picamera2     # For Raspberry Pi cameras
+# pyserial      # For serial communication with glasses
