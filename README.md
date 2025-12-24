@@ -25,7 +25,6 @@ BLIP-Reco/
 ├── test_caption.py
 └── test_vqa.py
 
-text
 
 ## ⚙️ Installation
 
@@ -33,19 +32,26 @@ text
 ```bash
 git clone https://github.com/alphonsejs995/BLIP-Reco.git
 cd BLIP-Reco
-2. Create Virtual Environment
-bash
+```
+###2. Create Virtual Environment
+```bash
 python -m venv glasses_env
-# Windows:
+```
+#### Windows:
+```
 glasses_env\Scripts\activate
-# Mac/Linux:
+```
+#### Mac/Linux:
+```
 source glasses_env/bin/activate
-3. Install Dependencies
-bash
+```
+###3. Install Dependencies
+```bash
 pip install -r requirements.txt
-🎯 Quick Start
-Basic Image Captioning
-python
+```
+###🎯 Quick Start
+##Basic Image Captioning
+```python
 from pyt_blip import BLIPModel
 
 # Initialize model
@@ -55,8 +61,9 @@ blip = BLIPModel(model_type="captioning")
 caption = blip.generate_caption("scene.jpg")
 print(f"Scene: {caption}")
 # Output: "a person wearing smart glasses looking at a computer screen"
-Visual Question Answering
-python
+```
+##Visual Question Answering
+```python
 from pyt_blip import BLIPModel
 
 # Initialize VQA model
@@ -69,9 +76,11 @@ answer = blip_vqa.ask_question(
 )
 print(f"Answer: {answer}")
 # Output: "yes, there is a zebra crossing"
-🔧 API Reference
-BLIPModel Class
-python
+```
+##🔧 API Reference
+
+###BLIPModel Class
+```python
 class BLIPModel:
     def __init__(self, model_type="captioning", device="auto"):
         """
@@ -103,9 +112,10 @@ class BLIPModel:
         Returns:
             str: Answer
         """
-🤖 Integration with Smart Glasses
-Example: Real-time Scene Analysis
-python
+```
+###🤖 Integration with Smart Glasses
+####Example: Real-time Scene Analysis
+```python
 import cv2
 from pyt_blip import BLIPModel
 
@@ -131,6 +141,7 @@ class SmartGlassesSystem:
                 print(f"Current scene: {desc}")
                 # Send to glasses display/speaker
                 self.display_output(desc)
+```
 📊 Performance
 Task	Model	Accuracy	Inference Time (RTX 3060)
 Image Captioning	BLIP-base	85.2%	~120ms
