@@ -33,7 +33,7 @@ BLIP-Reco/
 git clone https://github.com/alphonsejs995/BLIP-Reco.git
 cd BLIP-Reco
 ```
-###2. Create Virtual Environment
+### 2. Create Virtual Environment
 ```bash
 python -m venv glasses_env
 ```
@@ -45,12 +45,12 @@ glasses_env\Scripts\activate
 ```
 source glasses_env/bin/activate
 ```
-###3. Install Dependencies
+### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
-###🎯 Quick Start
-##Basic Image Captioning
+### 🎯 Quick Start
+## Basic Image Captioning
 ```python
 from pyt_blip import BLIPModel
 
@@ -62,7 +62,7 @@ caption = blip.generate_caption("scene.jpg")
 print(f"Scene: {caption}")
 # Output: "a person wearing smart glasses looking at a computer screen"
 ```
-##Visual Question Answering
+## Visual Question Answering
 ```python
 from pyt_blip import BLIPModel
 
@@ -77,9 +77,9 @@ answer = blip_vqa.ask_question(
 print(f"Answer: {answer}")
 # Output: "yes, there is a zebra crossing"
 ```
-##🔧 API Reference
+## 🔧 API Reference
 
-###BLIPModel Class
+### BLIPModel Class
 ```python
 class BLIPModel:
     def __init__(self, model_type="captioning", device="auto"):
@@ -113,8 +113,8 @@ class BLIPModel:
             str: Answer
         """
 ```
-###🤖 Integration with Smart Glasses
-####Example: Real-time Scene Analysis
+### 🤖 Integration with Smart Glasses
+#### Example: Real-time Scene Analysis
 ```python
 import cv2
 from pyt_blip import BLIPModel
@@ -142,24 +142,17 @@ class SmartGlassesSystem:
                 # Send to glasses display/speaker
                 self.display_output(desc)
 ```
-📊 Performance
-Task	Model	Accuracy	Inference Time (RTX 3060)
-Image Captioning	BLIP-base	85.2%	~120ms
-VQA	BLIP-VQA-base	78.5%	~150ms
-🌟 Use Cases
+
+## 🌟 Use Cases
 Assistive Technology: Help visually impaired users understand their environment
-
 AR Navigation: Provide contextual information during navigation
-
 Educational Tool: Real-time object identification and explanation
-
 Security: Scene monitoring with natural language alerts
-
 Research: Multimodal AI experimentation platform
 
-🛠️ Customization
+## 🛠️ Customization
 Fine-tuning on Custom Data
-python
+```python
 # Example: Fine-tune for specific objects
 from transformers import BlipForConditionalGeneration, BlipProcessor
 import torch
@@ -169,37 +162,29 @@ processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base
 
 # Add your training loop here
 # (See Hugging Face documentation for full fine-tuning guide)
-📈 Future Enhancements
+```
+## 📈 Future Enhancements
 BLIP-2 integration for improved performance
-
 Whisper integration for voice commands
-
 Edge optimization with ONNX/TensorRT
-
 Multi-language support
-
 Real-time video streaming analysis
 
-🤝 Contributing
+## 🤝 Contributing
 Contributions welcome! Please:
-
 Fork the repository
-
 Create a feature branch
-
 Submit a Pull Request
 
-📄 License
+## 📄 License
 MIT License - see LICENSE file for details.
 
-🙏 Acknowledgments
+## 🙏 Acknowledgments
 Salesforce Research for BLIP
-
 Hugging Face for Transformers library
-
 PyTorch team for the deep learning framework
 
-📧 Contact
+## 📧 Contact
 Alphonse J S
 GitHub: @alphonsejs995
 Project Link: https://github.com/alphonsejs995/BLIP-Reco
