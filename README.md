@@ -186,5 +186,7 @@ PyTorch team for the deep learning framework
 
 ## 📧 Contact
 Alphonse J S
+
 GitHub: @alphonsejs995
+
 Project Link: https://github.com/alphonsejs995/BLIP-Reco
